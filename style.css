@@ -12,6 +12,7 @@ font-family: 'Roboto Mono', monospace;
   position: relative;
   cursor: pointer;
   color: black;
+    left: 45%;
 }
 
 .name:after {
