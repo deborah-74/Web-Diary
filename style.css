@@ -279,6 +279,11 @@ top: 100vh;
     cursor: pointer;
 }
 
+.fire{
+  position: relative;
+  bottom: 23px;
+}
+
 .iampass{
   position: absolute;
   left: 50%;

@@ -92,7 +92,7 @@ body{
   left: 0;
 }
 
-.snake,.jennifer,.poetry,.celessodhia,.maze,.prose{
+.snake,.jennifer,.celessodhia,.maze,.badriyah,.cyborg,.squidward{
   width:100%;
   height:auto;
   display: block;
@@ -102,8 +102,22 @@ body{
 }
 
 .container{
-  column-count: 3;
+  column-count: 2;
   max-width: 100%;
   margin: 0 auto;
   column-gap: 20px;
+}
+
+.gameDes{
+  width:80%;
+  display: inline-block;
+  margin: 15px;
+  border-style: dotted;
+  text-align: justify;
+text-justify: inter-word;
+padding: 10px;
+}
+
+.honours{
+
 }
