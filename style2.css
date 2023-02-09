@@ -4,13 +4,21 @@ font-family: 'Roboto Mono', monospace;
 }
 
 body{
-  width: 100%;
+  /* width: 100%;
   height:100vh;
-  display:flex;
+  display:flex; */
+}
+
+.blockquote{
+  /* border-color: black;
+  border-bottom-style: dashed; */
+  /* background-color: black; */
+  border-color: black;
+  border-bottom-style: dashed;
 }
 
 .name {
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
   display: inline-block;
   padding: 5px;
@@ -37,7 +45,7 @@ body{
 }
 
 .about {
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
   color: black;
   display: inline-block;
@@ -65,7 +73,7 @@ body{
 }
 
 .projects{
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
   color: black;
   display: inline-block;
@@ -92,20 +100,25 @@ body{
   left: 0;
 }
 
-.snake,.jennifer,.celessodhia,.maze,.badriyah,.cyborg,.squidward{
-  width:100%;
-  height:auto;
-  display: block;
+.snow,.snake,.jennifer,.celessodhia,.maze,.badriyah,.cyborg,.squidward,.ladder{
+  width:45vw;
+  height:30vw;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   cursor: pointer;
+  object-fit: cover;
+}
+
+.names{
+  font-family: 'Spline Sans Mono', monospace;
 }
 
 .container{
   column-count: 2;
   max-width: 100%;
+  height: auto;
   margin: 0 auto;
-  column-gap: 20px;
 }
 
 .gameDes{
@@ -120,4 +133,110 @@ padding: 10px;
 
 .honours{
 
+}
+
+.container1{
+  display: flex;
+  flex-direction: row;
+    text-align: left;
+    margin: 10%;
+}
+
+.container2{
+  display: flex;
+  flex-direction: column;
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+    margin-top: 5%;
+}
+
+.box1, .box2{
+  width:50%;
+}
+
+.title1{
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+      margin-bottom: 5%;
+}
+
+.title2{
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+      margin-bottom: 5%;
+      margin-top: 5%;
+}
+
+.roles{
+  font-style: italic;
+}
+
+.place{
+  text-decoration: underline;
+}
+
+.myRoles{
+        margin-bottom: 5%;
+        margin-top: 5%;
+}
+
+.numList{
+  margin-top: 5%;
+}
+
+.alph{
+    margin: 3%;
+}
+
+.artPics{
+  display: flex;
+  margin-bottom: 2%;
+}
+
+.artPics2{
+  display: flex;
+  flex-direction: row;
+}
+
+.pic{
+  height:22vh;
+}
+
+.pic2{
+  height: 30vh;
+}
+
+.num4{
+  margin-top: 3%;
+}
+
+.num3{
+  margin-bottom: 3%;
+}
+
+.ladderPic{
+    margin-bottom: 6%;
+}
+
+.artPics3{
+    margin: 3%;
+}
+
+.num5 {
+    margin-bottom: 5%;
+}
+
+.highlight{
+    background-color: white;
+  margin: 5%;
+}
+
+.artPics4{
+    margin-bottom: 1%;
+}
+
+.artPics5 {
+    margin-bottom: 6%;
 }

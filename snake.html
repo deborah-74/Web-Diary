@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Deborah Agboola</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <!-- heading -->
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <a href="#" id="about2" onclick="document.location=this.id+'.html';return false;">
+                <h5 class="about">About</h5>
+            </a>
+            <a href="#" id="index" onclick="document.location=this.id+'.html';return false;">
+                <h5 class="name">Deborah Agboola</h5>
+                <!-- <img src="logo.png" width="10%"> -->
+            </a>
+            <a href="#" id="projects2" onclick="document.location=this.id+'.html';return false;">
+                <h5 class="projects">Projects</h5>
+            </a>
+        </blockquote>
+        <div class="container1">
+            <div class="box1">
+                <h1 class="title1">Snake Game</h1>
+                <p class="roles">Processing, Game Design, Coding </p>
+                <h5 class="place">Intro to Interactive Media @ NYUAD</h5>
+            </div>
+            <div class="box2">
+                <p>A recreation of the classic snake game, where the user must eat apples to keep getting longer, and avoid obstacles</p>
+            </div>
+            </div>
+        <img src="snake.gif" width="50%" />
+        <div class="container2">
+            <div class="overview">
+                <h3 class="title1">Project Overview</h3>
+                <p>
+                    For my midterm project, I decided to create a classic snake game, which is essentially a small snake (square) that moves around the screen to try and eat apples in order to gain points as well as get longer. The game ends once the snake collides with itself. In classic snake games, the snake also dies when it hits the wall, but I decided to let the snake for my game be able to go through walls because it gives the user more freedom. To add more difficulty though, I decided to incorporate bombs into my game and have the snake lose if it collides with the bomb. I incorporated sounds and images into my game to make it more interactive and visually appealing.
+                </p>
+
+            </div>
+
+            <div class="myRoles">
+                <h3 class="title1">Instructions</h3>
+                <p>1) Use up, down, left and right arrow keys to move the snake around</p>
+                <p>2) Eat the apples to get longer, and increase your score</p>
+                <p>3) DO NOT eat bombs, however tasty they may look</p>
+                <p>4) UDO NOT collide with yourself</p>
+                <p>5) You can go through the walls</p>
+                <p>6) Most importantly, have fun!</p>
+
+                <div class="artPics3">
+                    <img src="snake3.png" width="32%" />
+                    <img src="snake4.png" width="32%" />
+                    <img src="snake5.png" width="32%" />
+                </div>
+
+            </div>
+
+            <div>
+                <h3 class="title1">Development</h3>
+                <p>1) Firstly, I created two array lists to store the x position and y position of the snake head</p>
+                <p>
+                    2) Next, I created integer variables to store the blocksize (40 pixels), direction, width and height of window in 'blocksize' units. I measured the width and height in units of blocksize so that the snake will move throughout the screen in blocks, and not pixels. Also, it made it much easier to align the apples with the snakes later on in the code
+                </p>
+                <p>
+                    3) I created two integer arrays to store the possible directions that the snake could move in: 0, 0, 1, -1
+                </p>
+                <div class="artPics3">
+                    <img src="snake1.png" width="100%" />
+                </div>
+
+                <p>
+                    4) After, I had to get the snake moving! Firstly, I added an integer value (in blocksize units) to both the xPosition array list and the yPosition array list. Then, I created a for loop that updated the position of the snake and drew a square at the new position, while erasing the squares at the previous location.
+                </p>
+                <p>
+                    5) I created classes to store the apples and the bombs
+                </p>
+                <p>
+                    6) I created functions that would check if the snake had eaten the apple, the bomb, or collided with itself. There was also a wall function to allow the snake to pass through the wall, and a keyPressed function which controlled the direction of the snake
+                </p>
+                <p class="num5">
+                    7) Within draw, all the sounds and pictures were loaded including the background image. The game continued as long as the snake hadn't lost, and if it did a 'game over' screen would be displayed.
+                </p>
+            </div>
+            <div class="artPics5">
+                <img src="snake2.png" width="100%" />
+            </div>
+            <div>
+                <h3 class="title1">Problems I Faced</h3>
+                <h5 class="title1">Wrong Logic</h5>
+                <p class="num5">
+                    When I started off coding this assignment, I had a very simplified idea of what the code might look like. In my mind, it would just be a snake getting longer each time it collided with an apple object. Easy peasy right? Well, I was absolutely wrong! But it took me a whole week to figure this out. My logic was that I would create a rectangle with a width and a length. The length would get longer each time the snake 'ate' an apple. I progressed quite far into the code, and I had created an apple class, a function to change the direction of the snake and a function to check if the snake had eaten the apple, which would then make the length of the snake longer. When trying the game out, the snake did get longer, but not in the way I wanted it to. The snake just looked like a rectangle moving across the screen, and after a week I realised that I would have to start again because I was using the wrong logic. This was hard to come to terms with because this was only a few days before the deadline. After doing research online, I found out that in order to achieve the intended movement of the snake, I would have to use array lists to store the x position and y position. After I finally understood how to do this, I got started with my new midterm.
+                </p>
+                <h5 class="title1">Start Page and End Page</h5>
+                <p class="num5">
+                    I also struggled a lot trying to figure out how to transition from the start page to the game, and then to the ending page. Eventually, I just settled with moving the starting page images and text off screen whenever the user clicked the screen. I also struggled with trying to get the user to be able to restart the game, as my game kept on glitching.
+                </p>
+            </div>
+            <div>
+                <h3 class="title1">Things I Learnt</h3>
+                <p>
+                    - Since Array Lists were the backbone of my snake game, I got much practice learning how to use it and now I understood it much more despite it being quite a hard concept to grasp at first
+                </p>
+                <p>
+                    - I used boolean variables throughout my game, and also functions that returned boolean values, and now they are my favourite type of functions!
+                </p>
+                <p>
+                    - I learnt a lot more about how to order my lines of code, because several of the problems I faced were due to me putting things in the wrong order
+                </p>
+                <p class="num5">
+                    - I have always found using the % in code, but because I needed to use it in my code, I got a lot of practice using it and now I understand how to use it
+                </p>
+
+            </div>
+            <div>
+                <h3 class="title1">How I Would Improve the Game</h3>
+                <p>
+                    In order to improve my snake game, I would introduce more fruits, and perhaps make the snake change colour depending on whatever fruit was eaten. Each fruit would have a different amount of points. I would also introduce a 'special fruit', that whenever eaten, would give the snake invincibility and super speed for a small amount of time. This would make the game much more fun! I would make the game get more difficult the longer the snake became, like displaying bombs at a higher frequency and for longer. I would also make a poisonous snake that would decrease the score if eaten, and perhaps lock the walls for an amount of time, so that the snake would no longer be able to go through.
+                </p>
+            </div>
+        </div>
+    </figure>
+</body>
+</html>

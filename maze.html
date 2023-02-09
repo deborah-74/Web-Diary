@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Deborah Agboola</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- heading -->
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <a href="#" id="about2" onclick="document.location=this.id+'.html';return false;">
+                <h5 class="about">About</h5>
+            </a>
+            <a href="#" id="index" onclick="document.location=this.id+'.html';return false;">
+                <h5 class="name">Deborah Agboola</h5>
+                <!-- <img src="logo.png" width="10%"> -->
+            </a>
+            <a href="#" id="projects2" onclick="document.location=this.id+'.html';return false;">
+                <h5 class="projects">Projects</h5>
+            </a>
+        </blockquote>
+        <div class="container1">
+            <div class="box1">
+                <h1 class="title1">Space Maze</h1>
+                <p class="roles">Arduino, Processing </p>
+                <h5 class="place">Intro to Interactive Media @ NYUAD</h5>
+            </div>
+            <div class="box2">
+                <p>Help the Octavius Rover II escape the maze before your time runs out by answering a series of questions about space</p>
+            </div>
+        </div>
+        <img src="space.png" width="90%">
+        <div class="container2">
+        <div class="overview">
+            <h3 class="title1">Project Overview</h3>
+            <p>
+                For my Intro to IM final project, I created a game called Space Maze. Space Maze involves a robot vehicle - made with cardboard, a motor and Arduino - that has to navigate its way out of a maze with the help of the player. To do so, the player must answer 10 questions, which, if answered correctly, will give the user 5 seconds to move the space rover using the up, down, left and right keys on a keyboard. Once this time is up, the space rover will automatically come to a halt. If the space rover successfully makes it out of the maze, the player has won. If not, the player has failed the mission. The beauty of this game is that the difficulty is up to the user, as they can decide how complex they want their maze to be. All it takes is masking tape that the player sticks on the ground in whatever fashion they want!
+            </p>
+        </div>
+        <div class="myRoles">
+            <h3 class="title1">Instructions</h3>
+            <p>
+                Listen carefully. The Octavius II Rover has been stranded in an unknown land on Scitra Galactica and its engines are faulty. It appears to be a maze. You have been tasked with the most important task of the century: helping the Octavius II Rover navigate its way out of there. All you have to do is answer a series of questions that will restore energy back to the engines for a limited amount of time. Are you up for this challenge?
+            </p>
+        </div>
+        <div>
+            <h3 class="title1">Development</h3>
+            <h5 class="title1">Creating the Octavius II Rover</h5>
+            <p>
+                Firstly, I had to build the engine, using a breadboard, an arduino uno board and a couple of wires. The schematic below details how this was set up
+            </p>
+            <div class="artPics3">
+                <img src="maze1.jpeg" width="100%" />
+            </div>
+            <div class="artPics3">
+                <img src="maze2.png" width="100%" />
+            </div>
+
+            <p class="num5">
+                Secondly, I had to create the body of the rover using cardboard, elastic bands and glue. This took about 5 tries before I successfully created the body. Most of the difficulty came from the vehicle not being able to balance because I only had two wheels when I started the project. But after becoming fed up of gravity ruining my attempts, I was able to receive two more wheels from my Professor, who so nicely let me keep them. I stuck the breadboard underneath the vehicle, while the arduino uno board remained at the top. The motors were secured to the bottom of the vehicle with glue, and everything else was kept in place with elastic bands
+            </p>
+            <h5 class="title1">Getting the rover to move</h5>
+            <p>
+                - After successfully creating the Octavius II Rover, the next step was to get it to move using Arduino
+            </p>
+            <p>
+                - I connected the wheels on the left to one pin and the ones on the right to another pin, to make sure that the rover will be able to rotate
+            </p>
+            <p class="num5">
+                - Finally, to make sure everything was connected properly, I alternated between moving the wheels forward, backwards, rotating left and rotating right by changing the pin values to HIGH and LOW accordingly
+            </p>
+            <h5 class="title1">Controlling movement through Processing</h5>
+            <p>
+                - After verifying that the rover could move properly, my next task was to use the up, down, left and right keys to do the job
+            </p>
+            <p>
+                - Firstly, I had to set up communication between Processing and Arduino using Serial.begin(9600) and while(Serial.available() > 0). I also initialised Serial port in processing
+            </p>
+            <p>
+                - Next, I used the keyPressed() function and if statements to write a specific character into the serial port depending on what key was pressed
+            </p>
+            <p>
+                - In Arduino, this character was stored into a variable called 'direction', which moved the rover forward, backwards, left or right depending on the key
+            </p>
+            <p class="num5">
+                - I noticed that the wheels kept moving even once I let go of the key, so I used the keyReleased() function to write a character to the port that if read in Arduino, would make the values of each pin the wheels were connected to LOW
+            </p>
+            <h5 class="title1">Creating each page</h5>
+            <p>
+                - At this point, I thought the appropriate step would be creating the questions and then determining whether the player's answers were right or wrong. I couldn't see a way of proceeding with this task without designing the layout of each page of the game, so I decided to start designing (but not spend too much time on this so I don't run out of time!)
+            </p>
+            <p>
+                - Google was a great resource for me throughout this project! I found a lovely background image on google that matched with the space theme perfectly, and used this for the background for each page in the quiz
+            </p>
+            <p>
+                - I also found a website called Space Font, where I could download png images of space-themed text of my choice. I used this throughout my project
+            </p>
+            <p>
+                - To start off with designing, I created a start page that consists of a png maze and a start button
+            </p>
+            <p>
+                - The next page was the instructions page, which had a brief paragraph explaining the mission, and then a continue button
+            </p>
+            <p>
+                - The pages following these were the pages for each question, with three options for the player to choose from. Each question was taken from the space section of a trivia website that I found on google
+            </p>
+            <p>
+                - After this, I created a 'correct answer' page and a 'wrong answer' page that would be displayed depending on if the player answered the question correctly. The correct answer page had a png image of a stopwatch, and the four direction keys of the keyboard to indicate to the user that they can now move the rover. The wrong answer page just displayed the wrong answer png text
+            </p>
+            <p class="num5">
+                - Finally, I created a final page that prompted the user to click anywhere on the screen to start over
+            </p>
+            <div class="artPics3">
+                <img src="maze3.png" width="100%" />
+            </div>
+            <h5 class="title1">
+                Connecting Pages
+            </h5>
+            <p>
+                - After creating each page and testing to see if they looked good visually, my next task was to connect each page to the next, which was the most difficult task throughout the whole project
+            </p>
+            <p>
+                - To achieve this, I created boolean variables for each page that would only display a page if true. Otherwise it would be false and that page would not be displayed
+            </p>
+            <p class="num5">
+                - Then, I used if statements in the mousePressed() function to make the correct page true if a specific part of the screen (where the correct answer button was positioned) was pressed and the wrong answer page true if the wrong option was pressed
+            </p>
+            <div class="artPics3">
+                <img src="maze4.png" width="50%" />
+            </div>
+            <h5 class="title1">Creating the countdown</h5>
+            <p>
+                - I wanted the correct answer and wrong answer pages to only be displayed for 5 seconds, and for the rover to only be able to move during this time
+            </p>
+            <p class="num5">
+                - I did research to find different methods that I would be able to create a countdown, but I did not understand any of them and implementing them was a huge failure, so I thought of an easier method: finding audio of a 5-second countdown and a buzzer and only displaying the pages while the audio was playing. This was also an amazing idea because the audio heightened the suspense and made the game more immersive
+            </p>
+            <div class="artPics3">
+                <img src="maze5.png" width="100%" />
+            </div>
+            <h5 class="title1">Adding the sounds</h5>
+            <p>
+                - The sounds were crucial to bringing my project together and making it a cohesive whole
+            </p>
+            <p>
+                - Firstly, I found background music on YouTube - I used the Interstellar soundtrack because it really does sound like space, even though I have no idea what space sounds like
+            </p>
+            <p>
+                - Then, I found a countdown noise that would heighten tension whenever an answer was correct
+            </p>
+            <p class="num5">
+                - Finally, I found a buzzer sound that would play whenever an answer was incorrect
+            </p>
+            <h5 class="title1">Finishing touches</h5>
+            <p>
+                - To finish off, I added a hover effect to each button using the rect() and noFill() functions to create that effect
+            </p>
+            <p class="num5">
+                - I also added a typewriter effect to the instructions text
+            </p>
+        </div>
+            <div>
+                <h3 class="title1">Challenges</h3>
+                <p>
+                    I experienced so many challenges throughout this project, and it was very rewarding to overcome them.
+                </p>
+                <p>
+                    1) Connecting the pages This was by far the most difficult part of creating this project, because there were several errors that prevented the pages from showing up one after the other in the correct order after user input. Sometimes the next page would show for just a second before going back to the start page. Sometimes, the next page won't be displayed at all. Eventually, I fixed this problem using several boolean variables for the level, page and level state to ensure that the necessary page was displayed at the right time
+                </p>
+                <p class="num5">
+                    2) Creating the countdown This was one of the problems that I could not solve, but luckily I was able to find an easier solution using the isPlaying() function. I am so glad this idea came to my mind otherwise I would have spent much more time trying to figure out how to code a countdown. It ended up making more sense to use audio in the end because if I had a countdown displayed on the screen, it would be useless since during this time the player's attention would be solely focused on the rover and moving it. So,, using audio was much more practical and immersive
+                </p>
+            </div>
+            <div>
+                <h3 class="title1">What I Enjoyed the Most</h3>
+                <p class="num5">
+                    I definitely enjoyed creating the rover and getting it to move the most throughout this project, especially because I found Arduino much more difficult than Processing in this class. It was really rewarding to finally get it right! Before taking this class, I would have never thought that I would be capable of creating something like this, so I am really proud of myself!
+                </p>
+            </div>
+            <div>
+                <h3 class="title1">Demo</h3>
+                <a href="https://youtu.be/_Yti9OEBfn8">
+                    <p>
+                        Click here to watch the demo!
+                    </p>
+                </a>
+  
+
+            </div>
+        </div>
+    </figure>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
