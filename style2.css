@@ -100,7 +100,7 @@ body{
   left: 0;
 }
 
-.snow,.snake,.jennifer,.celessodhia,.maze,.badriyah,.cyborg,.squidward,.ladder{
+.snow,.snake,.jennifer,.celessodhia,.badriyah,.cyborg,.squidward,.ladder{
   width:45vw;
   height:30vw;
   box-sizing: border-box;
@@ -108,6 +108,16 @@ body{
   margin-top: 15px;
   cursor: pointer;
   object-fit: cover;
+}
+
+.maze {
+    width: 45vw;
+    height: 30vw;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    object-fit: onset;
 }
 
 .names{
